@@ -27,7 +27,7 @@ FROM nginx:latest
 RUN mkdir -p /var/www/vhost/angulartestapp.com
 
 ## From 'builder' copy website to default nginx public folder
-COPY --from=build-stage /app/dist  /var/www/vhost/agulartestapp.com
+COPY --from=build-stage /app/dist  /var/www/vhost/angulartestapp.com/
 
 ##Copy the nginx config file
 COPY  nginx.conf /etc/nginx/
