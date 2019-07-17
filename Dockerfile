@@ -24,10 +24,10 @@ RUN npm run build
 FROM nginx:latest
 
 ## Create Root folder of nginx Website.
-RUN mkdir -p /var/www/vhost/Testapp.com
+RUN mkdir -p /var/www/vhost/UItestapp.com
 
 ## From 'builder' copy website to default nginx public folder
-COPY --from=build-stage /app/dist  /var/www/vhost/Testapp.com/
+COPY --from=build-stage /app/dist  /var/www/vhost/UItestapp.com/
 
 ##Copy the nginx config file
 COPY  nginx.conf /etc/nginx/
