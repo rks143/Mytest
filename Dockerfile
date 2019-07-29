@@ -29,7 +29,7 @@ RUN mkdir -p /var/www/vhost/UItestapp.com
 ## From 'builder' copy website to default nginx public folder
 COPY --from=build-stage /app/dist  /var/www/vhost/UItestapp.com/
 
-##Copy the nginx config file
+##Copy the nginx config from root folder to docker image file
 COPY  nginx.conf /etc/nginx/
 
 EXPOSE 80
