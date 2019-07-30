@@ -20,7 +20,7 @@ ARG configuration=production
 RUN npm install -g ng-cli
 RUN npm run build
 
-# # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
+# # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx.
 FROM nginx:latest
 
 ## Create Root folder of nginx Website.
